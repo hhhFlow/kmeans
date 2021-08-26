@@ -18,16 +18,16 @@ public:
     point& operator=(const point &right) = default;
     point operator+(const point &right) const;
     point operator-(const point &right) const;
-    double operator*(const point &right) const; // 点乘
+    double operator*(const point &right) const; // dot
     point operator*(int k) const;
-    double operator^(const point &right) const; // 叉乘
+    double operator^(const point &right) const; // cross
     bool operator==(const point &right) const;
     bool operator!=(const point &right) const;
     bool operator<(const point &right) const;
     operator bool () const;
     void clear();
-    double len() const; // 长度
-    long long int len2() const; // 长度的平方
+    double len() const; 
+    long long int len2() const; // square of length
     bool isNull() const;
     std::string ShortDebugString() const {
         return "{x = " + std::to_string(x_) + ", y = " + std::to_string(y_) + "}";
